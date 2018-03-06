@@ -3,15 +3,14 @@ import Link from 'gatsby-link'
 
 fetch("https://api.airtable.com/v0/appwv8sbEAZqDwbxG/Scanning%20Hits?maxRecords=20&view=Grid%20view", {
   headers: {"Authorization": 'Bearer keyN4bQqzj0O0fVbT'}
-}).then(function(res) {
-  if (res.ok) {
-    console.log(res.json());
-  } else if (res.status == 401) {
-    alert("Oops! You are not authorized.");
-  }
-}, function(e) {
-  alert("Error submitting form!");
-});
+}).then((response) => response.json())
+    .then((responseData) => {
+      const records = responseData.records
+      console.log(records);
+    })
+  .catch(function(err) {
+    console.log(err);
+  });
 
 
 
