@@ -6,7 +6,7 @@ fetch("https://api.airtable.com/v0/appwv8sbEAZqDwbxG/Scanning%20Hits?maxRecords=
 }).then((response) => response.json())
     .then((responseData) => {
       const records = responseData.records
-      console.log(records);
+      console.log(records[0].fields.Author);
     })
   .catch(function(err) {
     console.log(err);
