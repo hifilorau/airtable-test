@@ -23,7 +23,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-         TEST
+         Foresight Studies
         </Link>
       </h1>
     </div>

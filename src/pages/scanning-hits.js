@@ -12,24 +12,22 @@ class SecondPage extends React.Component {
         };
       }
 
-
-
-  componentDidMount (){
-
+  componentDidMount() {
     fetch("https://api.airtable.com/v0/appwv8sbEAZqDwbxG/Scanning%20Hits?maxRecords=20&view=Grid%20view", {
-      headers: {"Authorization": 'Bearer keyN4bQqzj0O0fVbT'}
-    }).then((response) => response.json())
-        .then((responseData) => {
-          const records = responseData.records
-          this.setState({
-            records : records
-          })
-          console.log(this.state.records);
-        })
-      .catch(function(err) {
-        console.log(err);
-      });
-  }
+  headers: {"Authorization": 'Bearer keyN4bQqzj0O0fVbT'}
+}).then((response) => response.json())
+    .then((responseData) => {
+      const records = responseData.records
+      this.setState({
+        records : records
+      })
+      console.log(this.state.records);
+    })
+  .catch(function(err) {
+    console.log(err);
+  });
+}
+
 
 
   render() {
@@ -39,8 +37,8 @@ class SecondPage extends React.Component {
     );
 
     return (
-      <div>
-        <h1>RECORDS</h1>
+      <div className="blog-entry">
+        <h1>Scanning Hits</h1>
         <ul>{recordListItem}</ul>
         {/* {this.state.records} */}
 
