@@ -29,7 +29,6 @@ class SecondPage extends React.Component {
 }
 
 
-
   render() {
 
     const recordListItem = this.state.records.map((record) =>

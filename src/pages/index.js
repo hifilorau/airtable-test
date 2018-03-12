@@ -19,7 +19,7 @@ class Home extends React.Component {
 
     //   });
 
-}
+  }
 
   render() {
     //
@@ -28,9 +28,11 @@ class Home extends React.Component {
     // );
 
     return (
-      <div>
+      <div className="blog-entry">
       <h1>Welcome</h1>
-      <p>My name is Tom Rau. Amongst other things, both good and bad, I am a graduate student in the University of Houston college of Technology Strategic Foresight program. This is me sharing some of that experience. Actually, maybe this is just my blog area now, and I'll focus on life and learning.</p>
+      <p>My name is Tom Rau. I resent the idea that people are put into buckets, "He is a developer. They are a marketing person. She plays music. etc, etc". What we do is not a blueprint to understanding who we are. In fact in most cases it's more misdirection than discriptor.
+        Amongst other things, both good and bad, I am a graduate student in the University of Houston's College of Technology Strategic Foresight program. And i'd like to share some of this experience as I go in the hope that it will help other people navigate their own future. </p>
+        <p>But also I just need a good place to hit you all with my sick rants.</p>
        <TOC />
       </div>
     )
